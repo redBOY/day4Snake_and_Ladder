@@ -7,6 +7,7 @@ public class Snake_And_Ladder {
     static final int IF_LADDER = 1;
     static final int IF_SNAKE = 2;
     static int currentposition = 0;
+    static int dicecount = 0;
 
     public static void main(String[] args) {
         System.out.println("Welcome to Snake and ladder game");
@@ -28,13 +29,18 @@ public class Snake_And_Ladder {
                 currentposition=currentposition;
             }
             if(currentposition<START_POSITION){
-                currentposition=START_POSITION;
+                currentposition=0;
             }
-            currentposition = 100;
+            if(currentposition>100){
+                currentposition-=dice;
+            }
+
+            System.out.println("currentposition: "+currentposition);
+
         }
+        System.out.println("Total number of time die rolled: " + dicecount);
 
-        System.out.println("currentposition: "+currentposition);
+
+
     }
-
-
 }
