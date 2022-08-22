@@ -30,10 +30,11 @@ public class Snake_And_Ladder {
             if(currentposition<START_POSITION){
                 currentposition=START_POSITION;
             }
-
-            System.out.println("currentposition: "+currentposition);
+            currentposition = 100;
         }
 
-
+        System.out.println("currentposition: "+currentposition);
     }
+
+
 }
